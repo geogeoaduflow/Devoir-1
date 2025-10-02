@@ -3,48 +3,168 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>PNL — Concert événement • 15 Octobre 2025 • Stade de France</title>
+  <title>PNL — Concert Événement • 15 Octobre 2025 • Stade de France</title>
   <style>
-    body{margin:0;font-family:Arial,Helvetica,sans-serif;background:#0a0a0a;color:#f5f5f5}
-    .container{max-width:1000px;margin:auto;padding:20px}
-    h1{color:#FFD700;text-align:center}
-    h2{color:#FFD700;margin-top:30px}
-    .gallery{display:grid;grid-template-columns:repeat(auto-fill,minmax(250px,1fr));gap:12px;margin-top:10px}
-    .gallery img{width:100%;border-radius:8px}
-    .meta{text-align:center;margin:10px 0;color:#ccc}
-    .note{font-size:13px;color:#aaa;margin-top:5px}
+    /* ---- GLOBAL ---- */
+    @import url('https://fonts.googleapis.com/css2?family=Anton&family=Montserrat:wght@300;600&display=swap');
+    body {
+      margin: 0;
+      font-family: 'Montserrat', sans-serif;
+      background: #0a0a0a;
+      color: #f5f5f5;
+    }
+    h1, h2 { color: #FFD700; }
+    a { color: #FFD700; text-decoration: none; }
+
+    /* ---- NAV ---- */
+    nav {
+      position: sticky;
+      top: 0;
+      background: #111;
+      padding: 12px 20px;
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      z-index: 1000;
+    }
+    nav a {
+      color: #fff;
+      font-weight: bold;
+      padding: 6px 12px;
+    }
+    nav a:hover { background:#FFD700; color:#000; border-radius:6px; }
+
+    /* ---- SHOWCASE ---- */
+    .showcase .container {
+      max-width: 1000px;
+      margin: auto;
+      padding: 20px;
+    }
+    .showcase h1 { text-align: center; }
+    .showcase .meta { text-align: center; margin: 10px 0; color: #ccc; }
+    .gallery {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(250px,1fr));
+      gap: 12px;
+      margin-top: 10px;
+    }
+    .gallery img { width: 100%; border-radius: 8px; }
+    .note { font-size: 13px; color: #aaa; margin-top: 5px; }
+
+    /* ---- POSTER ---- */
+    .poster {
+      background: url('https://images.unsplash.com/photo-1511379938547-c1f69419868d?w=1600&q=80') no-repeat center/cover;
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+    }
+    .poster .overlay {
+      background: rgba(0,0,0,0.65);
+      padding: 40px;
+      border-radius: 20px;
+      max-width: 700px;
+    }
+    .poster h1 {
+      font-family: 'Anton', sans-serif;
+      font-size: 72px;
+      margin: 0;
+      color: #FFD700;
+    }
+    .poster h2 { font-size: 28px; margin: 10px 0 30px; color: #eee; }
+    .poster .date-place {
+      font-size: 22px;
+      margin: 20px 0;
+      color: #FFD700;
+      font-weight: bold;
+    }
+    .poster .guests h3 { color: #FFD700; margin-bottom: 12px; }
+    .poster .guests ul { list-style: none; padding: 0; }
+    .poster .guests li { font-size: 18px; margin: 5px 0; }
+    .cta { margin-top:20px; }
+    .btn {
+      display:inline-block;
+      background:#FFD700;
+      color:#000;
+      padding:12px 20px;
+      margin:6px;
+      border-radius:8px;
+      text-decoration:none;
+      font-weight:bold;
+    }
+    .btn:hover { background:#e6c200; }
+    .poster .note { font-size:13px;color:#ccc;margin-top:20px }
   </style>
 </head>
 <body>
-  <div class="container">
-    <h1>PNL — Concert Événement</h1>
-    <div class="meta">15 octobre 2025 — Stade de France, Paris</div>
 
-    <h2>Résumé</h2>
-    <p>Concert vitrine supposé de PNL au Stade de France, avec présentation éditoriale, programme et galerie d’images.</p>
+  <!-- NAVIGATION -->
+  <nav>
+    <a href="#showcase">Showcase</a>
+    <a href="#poster">Affiche</a>
+  </nav>
 
-    <h2>Programme</h2>
-    <ul>
-      <li>18h00 — Ouverture des portes</li>
-      <li>19h30 — Première partie (artiste invité)</li>
-      <li>20h45 — Arrivée sur scène PNL</li>
-      <li>22h30 — Final & sortie</li>
-    </ul>
+  <!-- SHOWCASE SECTION -->
+  <section id="showcase" class="showcase">
+    <div class="container">
+      <h1>PNL — Concert Événement</h1>
+      <div class="meta">15 octobre 2025 — Stade de France, Paris</div>
 
-    <h2>Galerie</h2>
-    <div class="gallery">
-      <img src="https://images.unsplash.com/photo-1511379938547-c1f69419868d?w=1200&q=60" alt="Concert crowd">
-      <img src="https://images.unsplash.com/photo-1506152983158-7f3c5e1b6f7b?w=1200&q=60" alt="Stage lights">
-      <img src="https://images.unsplash.com/photo-1485579149621-3123dd979885?w=1200&q=60" alt="Crowd from above">
-      <img src="https://images.unsplash.com/photo-1541542684-6b6b8f4c3b6f?w=1200&q=60" alt="Stadium exterior">
+      <h2>Résumé</h2>
+      <p>Concert vitrine supposé de PNL au Stade de France, avec présentation éditoriale, programme et galerie d’images.</p>
+
+      <h2>Programme</h2>
+      <ul>
+        <li>18h00 — Ouverture des portes</li>
+        <li>19h30 — Première partie (artiste invité)</li>
+        <li>20h45 — Arrivée sur scène PNL</li>
+        <li>22h30 — Final & sortie</li>
+      </ul>
+
+      <h2>Galerie</h2>
+      <div class="gallery">
+        <img src="https://images.unsplash.com/photo-1511379938547-c1f69419868d?w=1200&q=60" alt="Concert crowd">
+        <img src="https://images.unsplash.com/photo-1506152983158-7f3c5e1b6f7b?w=1200&q=60" alt="Stage lights">
+        <img src="https://images.unsplash.com/photo-1485579149621-3123dd979885?w=1200&q=60" alt="Crowd from above">
+        <img src="https://images.unsplash.com/photo-1541542684-6b6b8f4c3b6f?w=1200&q=60" alt="Stadium exterior">
+      </div>
+      <div class="note">Images utilisées :<br>
+        1. https://images.unsplash.com/photo-1511379938547-c1f69419868d<br>
+        2. https://images.unsplash.com/photo-1506152983158-7f3c5e1b6f7b<br>
+        3. https://images.unsplash.com/photo-1485579149621-3123dd979885<br>
+        4. https://images.unsplash.com/photo-1541542684-6b6b8f4c3b6f
+      </div>
     </div>
-    <div class="note">Images utilisées :<br>
-      1. https://images.unsplash.com/photo-1511379938547-c1f69419868d<br>
-      2. https://images.unsplash.com/photo-1506152983158-7f3c5e1b6f7b<br>
-      3. https://images.unsplash.com/photo-1485579149621-3123dd979885<br>
-      4. https://images.unsplash.com/photo-1541542684-6b6b8f4c3b6f
+  </section>
+
+  <!-- POSTER SECTION -->
+  <section id="poster" class="poster">
+    <div class="overlay">
+      <h1>PNL</h1>
+      <h2>Concert Événement — Stade de France</h2>
+      <div class="date-place">15 Octobre 2025 — Paris</div>
+
+      <div class="guests">
+        <h3>Artistes invités :</h3>
+        <ul>
+          <li>Damso</li>
+          <li>Orelsan</li>
+          <li>Lomepal</li>
+          <li>Zola</li>
+        </ul>
+      </div>
+
+      <div class="cta">
+        <a href="#" class="btn">Réserver</a>
+        <a href="#" class="btn">Plus d'infos</a>
+      </div>
+
+      <div class="note">Image utilisée en fond :<br>
+        https://images.unsplash.com/photo-1511379938547-c1f69419868d
+      </div>
     </div>
-  </div>
+  </section>
+
 </body>
 </html>
-
